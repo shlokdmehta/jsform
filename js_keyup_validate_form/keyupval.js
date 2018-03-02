@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$("#sname").keyup(function(){
-		$.post("process.php",{"sname": $("sname"}.val()},
+		$.post("process.php",{"sname": $("sname").val()},
 			function(data){
 				if(data == "Student name may be fictious"){
 					$("#label-name-msg").html("Student name my be fictious");
