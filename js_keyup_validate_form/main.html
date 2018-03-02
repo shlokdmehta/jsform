@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<!-- to make website mobile viewpoint is added-->
+  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<!-- AS document suggest to use bootstrap version 3.3-->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script type="text/javascript" src="Lab2/keyupval.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		.col-auto{
+			margin: auto;
+			padding-left: 13em;
+
+		}
+		
+		.form{
+			margin: auto;
+			padding-left: 6em;
+			padding-top: 50px;
+		}
+
+		label{
+			text-align: right;
+		}
+
+		.rowandcol{
+			padding-top: 40px;
+			line-height: 30px;
+
+		}
+	</style>
+</head>
+
+<body>
+<div class="container">
+	<h1>Student Registry</h1>
+
+<div class="form">
+	<form action="process.php" id="std-form">
+		<div class="form-group row" id="std-name">
+			<label for="sname" class="col-sm-2 col-form-label" name="std-name">Student Name: </label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" id="sname" aria-describedby="inputSuccess2Status">
+				<span id="glyphicon-name" class="" aria-hidden="true"></span>
+				<!-- sr-only -> only visible to screen readers -->
+				<span id="inputSuccess2Status" class="sr-only"></span>
+			</div>
+			<span id="label-name-msg"></span>
+		</div>
+
+		<div class="form-group row" id="std-num">
+			<label for="sid" class="col-sm-2 col-form-label">Student ID: </label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" id="sid" aria-describedby="inputWarning2Status">
+				<span id="glyphicon-num" class="" aria-hidden="true"></span>
+				<span id="inputWarning2Status" class="sr-only"></span>
+			</div>
+			<div id="label-num-msg"></div><!-- Change to span if possible after done -->
+		</div>
+
+		<div class="form-group row" id="std-program">
+			<label for="program" class="col-sm-2 col-form-label">Program: </label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" id="program" aria-describedby="inputError2Status">
+				<span id="glyphicon-program" class="" aria-hidden="true"></span>
+				<span id="inputError2Status" class="sr-only"></span>
+			</div>
+			<div id="label-program"></div>
+		</div>
+		<div class="col-auto">
+			<button type="submit" class="btn btn-primary" id="btn">Submit</button>
+		</div>
+		</div>
+	</form>
+
+
+</div>
+</div>
+
+<tabel id="tbl" class="tabel tabel-bordered">
+	<tbody>
+		<tr>
+			<th>Student Name</th>
+			<th>Student ID</th>
+			<th>Program</th>
+		</tr>
+	</tbody>
+</tabel>
+<!--
+<div class="container">
+<div class="rowandcol">
+<div class="row">
+	<div class="clearfix visible-xs-block"></div>
+	<div class="col-sm-4" style="border:1px solid black;">Student Name</div>
+	<div class="col-xs-6 col-sm-4" style="border:1px solid black;">Student ID</div>
+	<div class="col-xs-6 col-sm-4" style="border:1px solid black;">Program</div>
+</div>
+</div>
+</div>
+-->
+</body>
+</html>
